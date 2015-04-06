@@ -21,7 +21,13 @@ public class Encoder {
 			{
 				letters.add(plaintext.substring(j, j+1));
 			}
-		for(int j = 0;j<letters.size())
+		for(int j = 0;j<letters.size();j++)
+		{
+			char c = letters.get(j).charAt(0);
+			int encodChar = (int) c;
+			encodChar = encodChar+17;
+			
+		}
 		
 
 	}
