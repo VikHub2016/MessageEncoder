@@ -19,7 +19,7 @@ public class BackEnd
 		{
 			if(userMessages.get(i).equals(username))
 			{
-				list.add(userMessages.get(i));
+				list.add(userMessages.get(i+1));
 			}
 		}
 		
@@ -42,6 +42,25 @@ public class BackEnd
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+	}
+	
+	public List<String> getUsers()
+	{
+		List<String> list = new ArrayList<String>();
+		Encoder x = new Encoder("file.txt");
+		List<String> userMessages = new ArrayList<String>();
+		userMessages = x.read();
+		for(int i = 0; i < userMessages.size(); i = i + 2)
+		{
+			list.add(userMessages.get(i));
+		}
+		
+		if(!(list==null))
+		{
+			return list;
+		}
+		return null;
 		
 	}
 	
