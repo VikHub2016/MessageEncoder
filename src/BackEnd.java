@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,13 +29,20 @@ public class BackEnd
 		}
 		return null;
 	
-		
 	}
 	
 	public void addMessage(String username, String msg)
 	{
-		String encoded;
+		
 		Encoder x = new Encoder("file.txt");
+		String message = (username + "\t" + msg);
+		try {
+			x.write(message);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	
