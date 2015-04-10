@@ -71,7 +71,19 @@ public class BackEnd
 		}
 		for(int i = 0; i < userMessages.size(); i = i + 2)
 		{
-			list.add(userMessages.get(i));
+			Boolean addUser = true;
+			for(int j = 0 ; j < list.size(); j++)
+			{
+				if(list.get(j) == userMessages.get(i))
+				{
+					addUser = false;
+				}
+			}
+			
+			if(addUser == true)
+			{
+					list.add(userMessages.get(i));
+			}
 		}
 		
 		if(!(list==null))
