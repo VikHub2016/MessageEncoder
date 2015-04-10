@@ -9,18 +9,19 @@ public class BackEnd
 	
 	
 	
-<<<<<<< HEAD
-	public List<String> getMessages(String username) throws FileNotFoundException
-=======
 	@SuppressWarnings("unused")
 	public List<String> getMessages(String username)
->>>>>>> origin/master
 	{
 		
 		List<String> list = new ArrayList<String>();
 		Encoder x = new Encoder("file.txt");
 		List<String> userMessages = new ArrayList<String>();
-		userMessages = x.read();
+		try {
+			userMessages = x.read();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		for(int i = 0; i < userMessages.size(); i = i + 2)
 		{
 			if(userMessages.get(i).equals(username))
