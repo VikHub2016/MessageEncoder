@@ -44,27 +44,24 @@ public class Encoder {
 		{
 			char c = user.get(i).charAt(0);
 			int encodChar = (int) c;
-			encodChar = encodChar+2;
+			encodChar = encodChar+1;
 			encodUser = encodUser + "" + (char)encodChar;
 		}
 		for(int i = 0;i<message.size();i++)
 		{
 			char c = message.get(i).charAt(0);
 			int encodChar = (int) c;
-			encodChar = encodChar+2;
+			encodChar = encodChar+1;
 			encodMessage = encodMessage + "" + (char)encodChar;
 		}
 		
 		encodFull = encodUser + ":" + encodMessage;
-		try{
-			FileWriter writer = new FileWriter(f, false);	
+
+			FileWriter writer = new FileWriter(f,true);	
 			System.out.println(encodFull);	
 			writer.write(encodFull);
 			writer.write("\n");
-		}
-		catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();	}	
+			writer.close();
 	}
 	
 	public List<String> read() throws FileNotFoundException
@@ -78,25 +75,26 @@ public class Encoder {
 				String enuserName = usmes[0];
 				String realUser = "";
 				String realMessage = "";
-				String[] indivwords = usmes[1].split("\"");
+				String[] indivwords = usmes[1].split("!");
 				
 				for(int i = 0;i < enuserName.length();i++)
 				{
 					char c = enuserName.charAt(0);
 					int realChar = (int) c;
-					realChar = realChar - 2;
+					realChar = realChar - 1;
 					realUser = realUser + "" + (char)realChar;
 				}
 				
 				readoutput.add(realUser);
+				System.out.println(indivwords.length);
 				
 				for(int i = 0;i < indivwords.length;i++)
 				{
-					for(int j = 0;j<indivwords[i].length();i++)
+					for(int j = 0;j<indivwords[i].length();j++)
 					{
-							char c = enuserName.charAt(0);
+							char c = indivwords[i].charAt(0);
 							int realChar = (int) c;
-							realChar = realChar - 2;
+							realChar = realChar - 1;
 							realMessage = realMessage + "" + (char)realChar;
 					}
 					realMessage += " ";
@@ -108,7 +106,7 @@ public class Encoder {
 
 	}
 	
-	public static void main(String[] args)
+	/*public static void main(String[] args)
 	{
 		Encoder en = new Encoder("file.txt");
 		try {
@@ -119,6 +117,6 @@ public class Encoder {
 			e.printStackTrace();
 		}
 
-	}
+	}*/
 }
 
