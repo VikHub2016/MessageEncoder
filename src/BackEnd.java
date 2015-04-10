@@ -56,13 +56,19 @@ public class BackEnd
 		
 	}
 	
-	public List<String> getUsers() throws FileNotFoundException
+	public List<String> getUsers()
 	{
 		
 		List<String> list = new ArrayList<String>();
 		Encoder x = new Encoder("file.txt");
 		List<String> userMessages = new ArrayList<String>();
-		userMessages = x.read();
+		try 
+		{
+			userMessages = x.read();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		for(int i = 0; i < userMessages.size(); i = i + 2)
 		{
 			list.add(userMessages.get(i));
@@ -72,11 +78,28 @@ public class BackEnd
 		{
 			return list;
 		}
-		return null;
+		else	
+		{
+			return null;
+		}
 		
 	}
 	
-	
+	/*public static void main(String[] args)
+	{
+		
+		List<String> users = new ArrayList<String>();
+		Encoder x = new Encoder("file.txt");
+		try {
+			users = x.read();
+		} catch (FileNotFoundException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(users);
+		
+	}*/
 	
 	
 	
