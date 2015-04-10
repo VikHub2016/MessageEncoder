@@ -9,7 +9,12 @@ public class BackEnd
 	
 	
 	
+<<<<<<< HEAD
 	public List<String> getMessages(String username) throws FileNotFoundException
+=======
+	@SuppressWarnings("unused")
+	public List<String> getMessages(String username)
+>>>>>>> origin/master
 	{
 		
 		List<String> list = new ArrayList<String>();
@@ -52,6 +57,7 @@ public class BackEnd
 	
 	public List<String> getUsers() throws FileNotFoundException
 	{
+		
 		List<String> list = new ArrayList<String>();
 		Encoder x = new Encoder("file.txt");
 		List<String> userMessages = new ArrayList<String>();
