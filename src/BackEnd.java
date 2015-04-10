@@ -8,6 +8,7 @@ public class BackEnd
 	
 	
 	
+	@SuppressWarnings("unused")
 	public List<String> getMessages(String username)
 	{
 		
@@ -51,6 +52,7 @@ public class BackEnd
 	
 	public List<String> getUsers()
 	{
+		
 		List<String> list = new ArrayList<String>();
 		Encoder x = new Encoder("file.txt");
 		List<String> userMessages = new ArrayList<String>();
