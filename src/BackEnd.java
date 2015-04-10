@@ -27,8 +27,12 @@ public class BackEnd
 		{
 			return list;
 		}
-		return null;
+		else	
+		{
+			return null;
+		}
 	
+		
 	}
 	
 	public void addMessage(String username, String msg)
