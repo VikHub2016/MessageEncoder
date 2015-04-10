@@ -79,7 +79,6 @@ public class BackEnd
 					addUser = false;
 				}
 			}
-			
 			if(addUser == true)
 			{
 					list.add(userMessages.get(i));
