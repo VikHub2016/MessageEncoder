@@ -1,0 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+yegh:ge{h!eghg
+yegh:egheg
+fsht:eghtht
+tsuizsu:eghgit!ghh
+=======
+sadsdasd:asdasdsada
+>>>>>>> f1503795d6a8734c41048a48b78d7887f3bc35ff
+>>>>>>> origin/master
