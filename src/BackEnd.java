@@ -85,7 +85,7 @@ public class BackEnd
 		
 	}
 	
-	/*public static void main(String[] args)
+	public static void main(String[] args)
 	{
 		
 		List<String> users = new ArrayList<String>();
@@ -99,7 +99,7 @@ public class BackEnd
 		}
 		System.out.println(users);
 		
-	}*/
+	}
 	
 	
 	
