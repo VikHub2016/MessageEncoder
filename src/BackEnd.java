@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +9,7 @@ public class BackEnd
 	
 	
 	
-	public List<String> getMessages(String username)
+	public List<String> getMessages(String username) throws FileNotFoundException
 	{
 		
 		List<String> list = new ArrayList<String>();
@@ -49,7 +50,7 @@ public class BackEnd
 		
 	}
 	
-	public List<String> getUsers()
+	public List<String> getUsers() throws FileNotFoundException
 	{
 		List<String> list = new ArrayList<String>();
 		Encoder x = new Encoder("file.txt");
